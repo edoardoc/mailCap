@@ -19,9 +19,8 @@ This project demonstrates how to export Gmail messages to JSON files and then qu
 3. **Run** ad-hoc SQL queries against the flattened view or materialize it into a table or Parquet file for faster reads.
 
 ## Prerequisites
-- Git
-- DuckDB CLI (install via `brew install duckdb` or `pip install duckdb`)
 - Node.js (for the email fetch script)
+- DuckDB CLI (install via `brew install duckdb` or `pip install duckdb`)
 - A Google Cloud project with the Gmail API enabled
 
 ## Google Service Account Setup
