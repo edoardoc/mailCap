@@ -97,4 +97,30 @@ SELECT date, from_email, to_email, subject
  LIMIT 20;
 ```
 
+```sql
+-- the biggest senders by number of emails
+select
+  count(*) as howmany,
+  from_email as sender
+from
+  signature_expanded_cache
+group by
+  sender
+order by
+  howmany desc;
+```
+
+```sql
+-- the biggest senders by number of emails, grouped by domain
+select
+  count(*) as howmany,
+  split_part(from_email, '@', 2) as email_domain -- Extracts the part after '@'
+from
+  signature_expanded_cache
+group by
+  email_domain
+order by
+  howmany desc;
+```
+
 Happy querying! 🚀
